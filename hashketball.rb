@@ -274,8 +274,7 @@ game_hash.each do |location,team_info|
     binding.pry
     if stats[:number] == number
 name = player_name
-
-    return name
+return name
 
     end
   end
