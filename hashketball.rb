@@ -249,7 +249,6 @@ def winning_team()
   points = Hash.new(0)
   team = ""
   game_hash.keys.each do |team|
-binding.pry
     game_hash[team][:players].each do |player, stats|
       points[team] += stats[:points]
     end
