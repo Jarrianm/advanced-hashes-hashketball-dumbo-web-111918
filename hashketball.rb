@@ -272,13 +272,13 @@ player_name = ""
 game_hash.each do |location,team_info|
   team_info[:players].each do |name,stats|
     binding.pry
-    stats[:number].each_value 
+    stats[:number].each_value
 
     end
   end
 end
 
-
+player_by_number(33)
 
 
 
