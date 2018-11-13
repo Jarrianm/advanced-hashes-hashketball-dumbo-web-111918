@@ -272,7 +272,10 @@ player_name = ""
 game_hash.each do |location,team_info|
   team_info[:players].each do |name,stats|
     binding.pry
-    stats[:number].each_value
+    if stats[:number] == number
+name = player_name
+
+    return name
 
     end
   end
