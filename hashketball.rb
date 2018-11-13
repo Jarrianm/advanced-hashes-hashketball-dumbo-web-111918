@@ -265,7 +265,6 @@ def player_with_longest_name()
 names.max_by(&:length)
     end
   end
-names
 end
 
 
