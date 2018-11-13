@@ -136,7 +136,6 @@ end
 def num_points_scored(player_name)
   game_hash.each do |location,team_info|
 team_info[:players].each do |name,stats|
-binding.pry
       if player_name == name
         return stats[:points]
       end
@@ -267,6 +266,14 @@ def player_with_longest_name()
  names
 end
 
+def player_by_number(number)
+# return o=corresponding player name
+player_name = ""
+game_hash.each do |location,team_info|
+  team_info[:players].each do |name,stats|
+    if stats == [:number]
+      
+end
 
 
 
