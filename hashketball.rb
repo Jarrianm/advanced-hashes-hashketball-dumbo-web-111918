@@ -231,6 +231,39 @@ end
     end
   end
 
+def most_points_scored()
+  most_points = 0
+  player = ''
+  game_hash.each do |location,team_info|
+    team_info[:players].each do |name,stats|
+      if most_points < stats[:points]
+        player = name
+        most_points = stats[:points]
+      end
+    end
+  end
+  player
+end
+
+def winning_team()
+  points = Hash.new(0)
+  team = ""
+  game_hash.keys.each do |team|
+    game_hash[team][:players].each do |player, stats|
+      points[team] += stats[:points]
+    end
+  end
+  game_hash[points.keys.max][:team_name]
+end
+
+def player_with_longest_name()
+  names = []
+  longest_name = 0
+  game_hash.each do |location,team_info|
+    team_info[:players].each do |name,stats|
+      binding.pry
+      
+
 
 
 
